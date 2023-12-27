@@ -13,7 +13,7 @@ async def get_user_id(phone_number: str):
     try:
         client = TelegramClient('session_name', api_id, api_hash)
 
-        await client.start()
+        await client.start(bot_token='6913651280:AAHqctuJXTSuQPBiej2tKJ8-6DJwGzdR1CQ')
 
         entity = await client.get_input_entity(phone_number)
         if entity:
@@ -30,4 +30,4 @@ if __name__ == "__main__":
     import uvicorn
 
     # Run the FastAPI app using UVicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
